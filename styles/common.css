@@ -1,3 +1,22 @@
+/* Global vars */
+:root {
+  /* Colors */
+  --primary: #02b3ee;
+  --primary-dark: #0074b6;
+  --primary-darker: #005595;
+  --primary-light: #b0e4f8;
+  --secondary: #ee3d02;
+  --secondary-dark: #e03500;
+  --secondary-light: #ffcab9;
+  --tertiary: #02eeb3;
+  --tertiary-dark: #00a864;
+  --tertiary-light: #b7f8de;
+  --dark: #4a4a4a;
+  --gray: #b5b5b5;
+  --light: #f7f7f7;
+}
+
+/* Fonts */
 @font-face {
 	font-family: Poppins;
 	src: url(/assets/fonts/Poppins/Poppins-Black.ttf);
@@ -34,42 +53,40 @@
 }
 
 body {
-	background-color: #154360;
-	background-image: url(/assets/images/topography.svg);
+	background-color: var(--primary-darker);
 	font-family: Merriweather;
 }
 
+/* Title stylings */
 h1 {
 	font-family: Poppins;
   font-weight: bold;
+  color: var(--primary-dark);
+  text-align: center;
+  font-size: 2.5em;
 }
 
-h2 {
-	font-family: Poppins;
-}
+h2, h3 { color: var(--primary-darker); }
+
+/* Font sizings */
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.2em; }
+p, a { font-size: 12px; }
 
 a {
   outline: none;
   text-decoration: none;
 }
 
-a:link {
-  color: #42A5F5;
-}
+/* Link colors */
+a:link { color: var(--primary); }
+a:hover { color: var(--primary-light); }
+a:visited { color: var(--tertiary); }
+a::focus { color: var(--tertiary-light) }
 
-a:visited {
-  color: #2196F3;
-}
-
-a:hover {
-  color: #4FC3F7;
-}
-
-.content {
+.content-box {
   margin: 2vw;
 	padding: 2vw;
 	border-radius: 2vw;
-	background-color: RGBA(248, 248, 249, 0.5);
-  -webkit-backdrop-filter: blur(2px);
-  backdrop-filter: blur(2px);
+	background-color: var(--light);
 }
