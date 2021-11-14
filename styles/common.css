@@ -1,0 +1,58 @@
+@font-face {
+	font-family: Poppins;
+	src: url(/assets/fonts/Poppins/Poppins-Black.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+	font-family: Poppins;
+	src: url(/assets/fonts/Poppins/Poppins-Bold.ttf);
+}
+
+@font-face {
+	font-family: Merriweather;
+	src: url(/assets/fonts/Merriweather/Merriweather-Regular.ttf);
+}
+
+@font-face {
+	font-family: Merriweather;
+	src: url(/assets/fonts/Merriweather/Merriweather-Italic.ttf);
+  font-style: italic;
+}
+
+@font-face {
+	font-family: Merriweather;
+	src: url(/assets/fonts/Merriweather/Merriweather-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+	font-family: Merriweather;
+	src: url(/assets/fonts/Merriweather/Merriweather-BoldItalic.ttf);
+  font-style: italic;
+  font-weight: bold;
+}
+
+body {
+	background-color: #154360;
+	background-image: url(/assets/images/topography.svg);
+	font-family: Merriweather;
+}
+
+h1 {
+	font-family: Poppins;
+  font-weight: bold;
+}
+
+h2 {
+	font-family: Poppins;
+}
+
+.content {
+  margin: 2vw;
+	padding: 2vw;
+	border-radius: 2vw;
+	background-color: RGBA(248, 248, 249, 0.5);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+}
