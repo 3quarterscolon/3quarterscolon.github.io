@@ -1,0 +1,26 @@
+@font-face {
+	font-family: Poppins;
+	src: url(../assets/Poppins-Black.ttf);
+}
+
+@font-face {
+	font-family: Merriweather;
+	src: url(../assets/Merriweather-Regular.ttf);
+}
+
+body {
+	background-color: #154360;
+	background-image: url(../assets/topography.svg);
+	font-family: Poppins;
+}
+
+p {
+	font-family: Merriweather;
+}
+
+.content {
+	margin: 2vw;
+	padding: 1vw;
+	border-radius: 1vw;
+	background-color: RGBA(248, 248, 249, 127);
+}
