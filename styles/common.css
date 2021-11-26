@@ -13,19 +13,19 @@
   --tertiary-light: #b7f8de;
   --dark: #4a4a4a;
   --gray: #b5b5b5;
-  --light: #f7f7f7;
+  --white: #f7f7f7;
 }
 
 /* Fonts */
 @font-face {
 	font-family: Poppins;
-	src: url(/assets/fonts/Poppins/Poppins-Black.ttf);
+	src: url(/assets/fonts/Poppins/Poppins-Black.ttf), local(Arial-Bold);
   font-weight: bold;
 }
 
 @font-face {
 	font-family: Poppins;
-	src: url(/assets/fonts/Poppins/Poppins-Bold.ttf);
+	src: url(/assets/fonts/Poppins/Poppins-Bold.ttf), local(Arial);
 }
 
 @font-face {
@@ -63,15 +63,23 @@ h1 {
   font-weight: bold;
   color: var(--primary-dark);
   text-align: center;
-  font-size: 2.5em;
+}
+
+h2 {
+	font-family: Poppins;
+  font-weight: bold;
+  text-align: center;
 }
 
 h2, h3 { color: var(--primary-darker); }
 
+h1, h2, h3 { margin: 0px; }
+
 /* Font sizings */
-h2 { font-size: 1.5em; }
-h3 { font-size: 1.2em; }
-p, a { font-size: 12px; }
+body { font-size: 12px}
+h1 { font-size: 3em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.5em; }
 
 a {
   outline: none;
@@ -86,7 +94,16 @@ a::focus { color: var(--tertiary-light) }
 
 .content-box {
   margin: 2vw;
-	padding: 2vw;
 	border-radius: 2vw;
-	background-color: var(--light);
+  background: var(--white);
+}
+
+.title {
+  padding: 0.5em;
+  border-radius: 2vw 2vw 0 0;
+  background: var(--gray);
+}
+
+.content {
+  padding: 1vw 2vw 2vw;
 }
