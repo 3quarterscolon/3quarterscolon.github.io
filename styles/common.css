@@ -2,15 +2,15 @@
 :root {
   /* Colors */
   --primary: #02b3ee;
-  --primary-dark: #0074b6;
+  --primary-dark: #0085ca;
   --primary-darker: #005595;
-  --primary-light: #b0e4f8;
+  --primary-light: #44c0f0;
   --secondary: #ee3d02;
   --secondary-dark: #e03500;
-  --secondary-light: #ffcab9;
+  --secondary-light: #ff855d;
   --tertiary: #02eeb3;
   --tertiary-dark: #00a864;
-  --tertiary-light: #b7f8de;
+  --tertiary-light: #80f3ca;
   --dark: #4a4a4a;
   --gray: #b5b5b5;
   --white: #f7f7f7;
@@ -19,13 +19,19 @@
 /* Fonts */
 @font-face {
 	font-family: Poppins;
-	src: url(/assets/fonts/Poppins/Poppins-Black.ttf), local(Arial-Bold);
+	src: url(/assets/fonts/Poppins/Poppins-Black.ttf), local(Arial);
   font-weight: bold;
 }
 
 @font-face {
 	font-family: Poppins;
 	src: url(/assets/fonts/Poppins/Poppins-Bold.ttf), local(Arial);
+}
+
+@font-face {
+	font-family: Poppins;
+	src: url(/assets/fonts/Poppins/Poppins-Medium.ttf), local(Arial);
+  font-weight: lighter;
 }
 
 @font-face {
@@ -67,19 +73,19 @@ h1 {
 
 h2 {
 	font-family: Poppins;
-  font-weight: bold;
   text-align: center;
+  font-weight: lighter
 }
 
 h2, h3 { color: var(--primary-darker); }
 
-h1, h2, h3 { margin: 0px; }
+h1, h2, h3, ol, ul { margin: 0px; }
 
 /* Font sizings */
 body { font-size: 12px}
 h1 { font-size: 3em; }
-h2 { font-size: 2em; }
-h3 { font-size: 1.5em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.2em; }
 
 a {
   outline: none;
@@ -87,10 +93,10 @@ a {
 }
 
 /* Link colors */
-a:link { color: var(--primary); }
-a:hover { color: var(--primary-light); }
-a:visited { color: var(--tertiary); }
-a::focus { color: var(--tertiary-light) }
+a:link { color: var(--primary-dark); }
+a:hover { color: var(--primary); }
+a:visited { color: var(--primary-light); }
+a::focus { color: var(--primary-light) }
 
 .content-box {
   margin: 2vw;
@@ -105,5 +111,5 @@ a::focus { color: var(--tertiary-light) }
 }
 
 .content {
-  padding: 1vw 2vw 2vw;
+  padding: 2vw;
 }
