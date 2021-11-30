@@ -98,6 +98,7 @@ a:hover { color: var(--primary); }
 a:visited { color: var(--primary-light); }
 a::focus { color: var(--primary-light) }
 
+/* Layout */
 .content-box {
   margin: 2vw;
 	border-radius: 2vw;
