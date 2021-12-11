@@ -6,7 +6,6 @@
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
       function updateResult() {
-        console.log(document.getElementById('input'));
         document.getElementById('result').innerHTML = marked.parse(document.getElementById('input').value);
       }
     </script>
