@@ -1,0 +1,17 @@
+.post-box {
+  padding: 0.5vw;
+  border: 0.1vw solid var(--gray);
+  border-left-width: 0.7vw;
+  border-left-color: var(--primary-dark);
+  border-radius: 0 2vw 2vw 0;
+}
+
+#post-header {
+  font-size: 2em;
+  text-align: center;
+}
+
+#post-id {
+  font-size: 0.5em;
+  color: var(--gray);
+}

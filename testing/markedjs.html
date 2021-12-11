@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <title>: ; - home</title>
+    <link rel="stylesheet" href="/styles/common.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      function updateResult() {
+        document.getElementById('result').innerHTML = marked.parse(document.getElementById('input').value);
+      }
+    </script>
+	</head>
+	<body onload="updateResult();">
+		<div class="content-box">
+      <div class="title">
+			  <h1>: ; Lab</h1>
+        <h2><a href="/ex/index.html">home</a> - <a href="index.html">lab home</a></h2>
+      </div>
+      <div class="content">
+        <textarea id="input" rows="5">*Hello, World!*</textarea>
+        <button onclick="updateResult();">Update</button>
+        <hr>
+        <div id="result"></div>
+      </div>
+		</div>
+	</body>
+</html>
