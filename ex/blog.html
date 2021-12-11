@@ -1,77 +1,77 @@
 <!DOCTYPE html>
 <html>
 	<head>
-    <title>: ; - blog</title>
-    <link rel="stylesheet" href="/styles/common.css">
-    <link rel="stylesheet" href="/styles/blog.css">
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script>
-        async function loadPost() {
-            var urlParams = new URLSearchParams(location.search);
+        <title>: ; - blog</title>
+        <link rel="stylesheet" href="/styles/common.css">
+        <link rel="stylesheet" href="/styles/blog.css">
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <script>
+            async function loadPost() {
+                var urlParams = new URLSearchParams(location.search);
 
-            var postName = Array.from(urlParams.values())[Array.from(urlParams.keys()).indexOf("post")];
+                var postName = Array.from(urlParams.values())[Array.from(urlParams.keys()).indexOf("post")];
 
-            var blogData;
-            await fetch("/blog.json")
-                .then(response => response.json())
-                .then(data => {blogData = data});
+                var blogData;
+                await fetch("/blog.json")
+                    .then(response => response.json())
+                    .then(data => {blogData = data});
 
-            // TODO: Find a way to do this before loading the page fully.
-            if (!postName) {
-                window.location.replace(`?post=${blogData["info"]["latest_post"]}`); // If no post is specified, redirect to the latest post.
-            }
-
-            var postData = false;
-            for (id of Object.keys(blogData["posts"])) {
-                if ([id.substr(0,id.indexOf(" ")), id.substr(id.indexOf(" ")+1)].includes(postName)) {
-                    var postID = id.substr(0,id.indexOf(" "));
-                    postData = blogData["posts"][id];
-                    break;
+                // TODO: Find a way to do this before loading the page fully.
+                if (!postName) {
+                    window.location.replace(`?post=${blogData["info"]["latest_post"]}`); // If no post is specified, redirect to the latest post.
                 }
-            }
 
-            if (!postID) {
-                window.location.replace(`?post=${blogData["info"]["latest_post"]}`); // If postID cannot be found, redirect to the latest post.
-            }
+                var postData = false;
+                for (id of Object.keys(blogData["posts"])) {
+                    if ([id.substr(0,id.indexOf(" ")), id.substr(id.indexOf(" ")+1)].includes(postName)) {
+                            var postID = id.substr(0,id.indexOf(" "));
+                            postData = blogData["posts"][id];
+                            break;
+                    }
+                }
 
-            document.getElementById("post-title").innerHTML = postData["title"];
-            document.getElementById("post-id").innerHTML = `#${postID}`;
-            document.getElementById("post-content").innerHTML = marked.parse(postData["content"]);
-            document.getElementById("post-tags").innerHTML = postData["tags"].join(", ");
-            if (postID > 1) { document.getElementById("previous").setAttribute("href", `?post=${postID - 1}`); };
-            if (postID < blogData["info"]["latest_post"]) { document.getElementById("next").setAttribute("href", `?post=${postID + 1}`); };
-            document.getElementById("last").setAttribute("href", `?post=${blogData["info"]["latest_post"]}`);
-        }
-    </script>
+                if (!postID) {
+                    window.location.replace(`?post=${blogData["info"]["latest_post"]}`); // If postID cannot be found, redirect to the latest post.
+                }
+
+                document.getElementById("post-title").innerHTML = postData["title"];
+                document.getElementById("post-id").innerHTML = `#${postID}`;
+                document.getElementById("post-content").innerHTML = marked.parse(postData["content"]);
+                document.getElementById("post-tags").innerHTML = postData["tags"].join(", ");
+                if (postID > 1) { document.getElementById("previous").setAttribute("href", `?post=${postID - 1}`); };
+                if (postID < blogData["info"]["latest_post"]) { document.getElementById("next").setAttribute("href", `?post=${postID + 1}`); };
+                document.getElementById("last").setAttribute("href", `?post=${blogData["info"]["latest_post"]}`);
+            }
+        </script>
 	</head>
 	<body onload="loadPost();">
-		<div class="content-box">
-      <div class="title">
-			  <h1>3QUARTERSCOLON</h1>
-        <h2><a href="index.html">home</a> - blog - <a href="projects.html">projects</a> - <a href="tools.html">tools</a> - <a href="about.html">about</a></h2>
-      </div>
-      <div class="content">
-        <p>
-          Welcome to my blog. This is where I (theroretically) post stuff. Right now it's not finished, but it should be in a week or so.
-        </p>
-
-        <div style="margin: 0 1vw;">
-          <div style="margin: 1vw 0 2em 0;">
-            <h3 id="post-header"><span id="post-title">Title</span> <span id="post-id">(#9001)</span></h3>
-            <span style="float: left;"><a id="first" href="?post=1">First</a> - <a id="previous" href="#">Previous</a></span>
-            <span style="float: right;"><a id="next" href="#">Next</a> - <a id="last" href="#">Last</a></span>
-          </div>
-
-          <div class="post-box">
-            <div id="post-content">
-              This is a placeholder entry.
+	    <div class="content-box">
+            <div class="title">
+			    <h1>3QUARTERSCOLON</h1>
+                <h2><a href="index.html">home</a> - blog - <a href="projects.html">projects</a> - <a href="tools.html">tools</a> - <a href="about.html">about</a></h2>
             </div>
-          </div>
-          <p>
-            Tags: <span id="post-tags">blah, iporem ipsum, filler text, your text here, foo, bar, spam</span>
-          </p>
-        </div>
-      </div>
+            <div class="content">
+                <p>
+                    Welcome to my blog. This is where I (theroretically) post stuff. Right now it's not finished, but it should be in a week or so.
+                </p>
+
+                <div style="margin: 0 1vw;">
+                    <div style="margin: 1vw 0 2em 0;">
+                        <h3 id="post-header"><span id="post-title">Title</span> <span id="post-id">(#9001)</span></h3>
+                        <span style="float: left;"><a id="first" href="?post=1">First</a> - <a id="previous" href="#">Previous</a></span>
+                        <span style="float: right;"><a id="next" href="#">Next</a> - <a id="last" href="#">Last</a></span>
+                    </div>
+
+                    <div class="post-box">
+                    <div id="post-content">
+                        This is a placeholder entry.
+                    </div>
+                    </div>
+                    <p>
+                        Tags: <span id="post-tags">blah, iporem ipsum, filler text, your text here, foo, bar, spam</span>
+                    </p>
+                </div>
+            </div>
 		</div>
 	</body>
 </html>

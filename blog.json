@@ -1,22 +1,22 @@
 {
-  "info": {
-    "latest_post": "2"
-  },
-  "posts": {
-    "2 blog-release": {
-        "title": "Blog Released!",
-        "tags": ["announcement", "site-update", "update"],
-        "content": "## Blog released!\nIf you're reading this, it means my blog has been released.\n\nThere isn't much here, but as I start more projects (or just have ideas for posts), there will be more content (mainly updates)."
+    "info": {
+        "latest_post": "2"
     },
-    "1 first-post": {
-      "title": "First Post!",
-      "tags": ["announcement"],
-      "content": "# First Post!\nI've just started my blog. In the future, I'll post project updates and other miscellaneous stuff here.\n\nFor now, I'm working on improving this site (my next projects for this site will probably be smaller). After that, I'll start de-rusting my Python and programming some games."
-    },
-    "0 test": {
-      "title": "Test Post",
-      "tags": ["test", "example"],
-      "content": "This is a test.\n## Testing\n[Testing x 3](./index.html)\n## Testing x 2\n**Hello, World**\n## Testing x 3\n> Lorem ipsum dolerum sit amet\n\n> blah blah blah"
+    "posts": {
+        "2 blog-release": {
+            "title": "Blog Released!",
+            "tags": ["announcement", "site-update", "update"],
+            "content": "## Blog released!\nIf you're reading this, it means my blog has been released.\n\nThere isn't much here, but as I start more projects (or just have ideas for posts), there will be more content (mainly updates)."
+        },
+        "1 first-post": {
+            "title": "First Post!",
+            "tags": ["announcement"],
+            "content": "# First Post!\nI've just started my blog. In the future, I'll post project updates and other miscellaneous stuff here.\n\nFor now, I'm working on improving this site (my next projects for this site will probably be smaller). After that, I'll start de-rusting my Python and programming some games."
+        },
+        "0 test": {
+            "title": "Test Post",
+            "tags": ["test", "example"],
+            "content": "This is a test.\n## Testing\n[Testing x 3](./index.html)\n## Testing x 2\n**Hello, World**\n## Testing x 3\n> Lorem ipsum dolerum sit amet\n\n> blah blah blah"
+        }
     }
-  }
 }
